@@ -6,7 +6,7 @@ Suppose a farmer has 75 acres on which to plant two crops: wheat and barley. To 
 
 Mathmatically, we can formulate this as :
 
-```
+```c++
 Maximize P = (110)(1.30)x + (30)(2.00)y = 143x + 60y
 s.t.            
 				120x + 210y <= 15000
@@ -17,7 +17,7 @@ s.t.
 
 where  `x` denote the number of acres allotted to wheat and `y` the number of acres allotted to barley, the optimal solution of this problem is 
 
-```
+```c++
 x = 21.875
 y = 75 - 21.875 = 53.125
 ```
