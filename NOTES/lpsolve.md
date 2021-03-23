@@ -9,7 +9,7 @@ Mathmatically, we can formulate this as :
 ```c++
 Maximize P = (110)(1.30)x + (30)(2.00)y = 143x + 60y
 s.t.            
-				120x + 210y <= 15000
+		120x + 210y <= 15000
                 110x + 30y <= 4000
                 x + y <= 75
                 x >= 0, y >= 0
