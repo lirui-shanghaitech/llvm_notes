@@ -57,13 +57,13 @@ set_row_name(lp, 1, "row1");
 set_row_name(lp, 1, "row2");
 ```
 
-* Note that for **add_constraint** (and **add_constraintex** when *colno* is NULL) element 0 of the array is not considered (i.e. ignored). Column 1 is element 1, column 2 is element 2, ..., that is why row[1+2] must have `three` elements
+*  Note that for **add_constraint** (and **add_constraintex** when *colno* is NULL) element 0 of the array is not considered (i.e. ignored). Column 1 is element 1, column 2 is element 2, ..., that is why row[1+2] must have `three` elements
 
-* **add_constraintex** has the possibility to specify only the non-zero elements. In that case *colno* specifies the column numbers of the non-zero elements. Both *row* and *colno* are then zero-based arrays. This will speed up building the model considerably if there are a lot of zero values. In most cases the matrix is sparse and has many zero value. Note that **add_constraintex** behaves the same as **add_constraint** when *colno* is NULL.
+*  **add_constraintex** has the possibility to specify only the non-zero elements. In that case *colno* specifies the column numbers of the non-zero elements. Both *row* and *colno* are then zero-based arrays. This will speed up building the model considerably if there are a lot of zero values. In most cases the matrix is sparse and has many zero value. Note that **add_constraintex** behaves the same as **add_constraint** when *colno* is NULL.
 
-* LE:  Less than or equal (<=), EQ:  Equal (=), GE:  Greater than or equal (>=)
+*  LE:  Less than or equal (<=), EQ:  Equal (=), GE:  Greater than or equal (>=)
 
-* Note that: **ROW0** is the objective function, so when index the constraints start from 1, for instance ` set_mat(lp, 1, 1, 3.14);` set the first constaints to be `3.14x+210y <= 15000`, also when you iterate through variables you must start with 1 (strange it not start with zero)
+*  Note that: **ROW0** is the objective function, so when index the constraints start from 1, for instance ` set_mat(lp, 1, 1, 3.14);` set the first constaints to be `3.14x+210y <= 15000`, also when you iterate through variables you must start with 1 (strange it not start with zero)
 
 |              | COL0 (Unsed) | COL1 (X) | COL2 (Y) |
 | ------------ | ------------ | -------- | -------- |
