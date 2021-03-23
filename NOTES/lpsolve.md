@@ -57,7 +57,7 @@ set_row_name(lp, 1, "row1");
 set_row_name(lp, 1, "row2");
 ```
 
-*  Note that for **add_constraint** (and **add_constraintex** when *colno* is NULL) element 0 of the array is not considered (i.e. ignored). Column 1 is element 1, column 2 is element 2, ..., that is why row[1+2] must have `three` elements
+*Note that for **add_constraint** (and **add_constraintex** when *colno* is NULL) element 0 of the array is not considered (i.e. ignored). Column 1 is element 1, column 2 is element 2, ..., that is why row[1+2] must have `three` elements
 
 *  **add_constraintex** has the possibility to specify only the non-zero elements. In that case *colno* specifies the column numbers of the non-zero elements. Both *row* and *colno* are then zero-based arrays. This will speed up building the model considerably if there are a lot of zero values. In most cases the matrix is sparse and has many zero value. Note that **add_constraintex** behaves the same as **add_constraint** when *colno* is NULL.
 
